@@ -1,6 +1,8 @@
 package net.Exel.minecraftmod;
 
 import com.mojang.logging.LogUtils;
+import net.Exel.minecraftmod.block.ModBlocks;
+import net.Exel.minecraftmod.item.ModItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -18,6 +20,10 @@ public class MinecraftMod {
 
     public MinecraftMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(modEventBus);
+
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
