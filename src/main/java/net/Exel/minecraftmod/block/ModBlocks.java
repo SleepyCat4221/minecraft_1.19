@@ -57,7 +57,7 @@ public class ModBlocks {
            .strength(1f).requiresCorrectToolForDrops()), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
 
-    public static final RegistryObject<Block> WIN_XP_BLOCK = registerBlock("win_xp_block", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.DIRT)
+    public static final RegistryObject<Block> LUCKYBLOCK1 = registerBlock("luckyblock1", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.DIRT)
             .strength(1f), UniformInt.of(40,100)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
 }

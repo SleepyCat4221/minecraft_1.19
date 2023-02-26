@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#I#",
+    "###"
+  ],
+  "key":{
+    "#":{
+      "item": "minecraft:oak_planks"
+    },
+    "I": {
+      "item": "minecraft:chest"
+    }
+  } ,
+  "result": {
+    "item": "minecraftmod:luckyblock1"
+  }
+}
