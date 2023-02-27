@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "minecraftmod:atom_ore"
+    "minecraftmod:atom_ore",
+    "minecraftmod:luckyblock3"
   ]
 }

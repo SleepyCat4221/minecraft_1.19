@@ -7,13 +7,13 @@
   ],
   "key":{
     "#":{
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:diamond"
     },
     "I": {
-      "item": "minecraftmod:luckyblock1"
+      "item": "minecraftmod:luckyblock2"
     }
   } ,
   "result": {
-    "item": "minecraftmod:luckyblock2"
+    "item": "minecraftmod:luckyblock3"
   }
 }
