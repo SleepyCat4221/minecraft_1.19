@@ -1,10 +1,12 @@
 {
   "item.minecraftmod.corn": "Corn",
-
+  "item.minecraftmod.lucky_dice": "Lucky Dice",
   "itemGroup.CornTab": "Corn :3",
 
   "block.minecraftmod.atom_ore": "Atom Ore",
   "block.minecraftmod.luckyblock1": "Lucky Block T1",
   "block.minecraftmod.luckyblock2": "Lucky Block T2",
-  "block.minecraftmod.luckyblock3": "Lucky Block T3"
+  "block.minecraftmod.luckyblock3": "Lucky Block T3",
+  "block.minecraftmod.speedblock": "Speed Block"
+
 }

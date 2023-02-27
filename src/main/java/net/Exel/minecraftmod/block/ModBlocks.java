@@ -2,6 +2,7 @@ package net.Exel.minecraftmod.block;
 
 import com.mojang.blaze3d.shaders.Uniform;
 import net.Exel.minecraftmod.MinecraftMod;
+import net.Exel.minecraftmod.block.custom.SpeedBlock;
 import net.Exel.minecraftmod.item.ModCreativeModeTab;
 import net.Exel.minecraftmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -65,6 +66,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> LUCKYBLOCK3 = registerBlock("luckyblock3", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.DIRT)
             .strength(1f), UniformInt.of(60,100)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+
+    public static final RegistryObject<Block> SPEEDBLOCK = registerBlock("speedblock", () -> new SpeedBlock(BlockBehaviour.Properties.of(Material.DIRT)
+            .strength(1f)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
 
 }
