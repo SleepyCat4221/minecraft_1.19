@@ -58,6 +58,10 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> LUCKYBLOCK1 = registerBlock("luckyblock1", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.DIRT)
-            .strength(1f), UniformInt.of(40,100)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+            .strength(1f), UniformInt.of(20,60)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+
+    public static final RegistryObject<Block> LUCKYBLOCK2 = registerBlock("luckyblock2", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.DIRT)
+            .strength(1f), UniformInt.of(40,80)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+
 
 }
