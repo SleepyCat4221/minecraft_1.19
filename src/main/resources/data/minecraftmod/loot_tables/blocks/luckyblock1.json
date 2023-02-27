@@ -122,14 +122,16 @@
     }
   ],
 
-
-   "enchantments": [
-    {
-      "enchantment": "minecraft:silk_touch",
-      "levels": {
-        "min": 1
-     },
-      "name": "minecraftmod:luckyblock1"
-    }
-  ]
+  "conditions": "minecraft:match_tool",
+  "predicate": {
+    "enchantments": [
+      {
+        "enchantment": "minecraft:silk_touch",
+        "levels": {
+          "min": 1
+        },
+        "name": "minecraftmod:luckyblock1"
+      }
+    ]
+  }
 }
