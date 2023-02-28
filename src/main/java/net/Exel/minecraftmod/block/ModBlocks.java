@@ -81,5 +81,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> JUMP_BLOCK20 = registerBlock("jumpblock20", () -> new JumpBlock20(BlockBehaviour.Properties.of(Material.DIRT)
             .strength(1f)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
-
+    //Regeneration Blocks
+    public static final RegistryObject<Block> REGENERATION = registerBlock("regen", () -> new Regeneration(BlockBehaviour.Properties.of(Material.DIRT)
+            .strength(1f)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> REGENERATION2 = registerBlock("regen2", () -> new Regeneration2(BlockBehaviour.Properties.of(Material.DIRT)
+            .strength(1f)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 }

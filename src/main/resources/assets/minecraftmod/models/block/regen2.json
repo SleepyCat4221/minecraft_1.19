@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "minecraftmod:block/strenghblock2"
+    "all": "minecraftmod:block/regen2"
   }
 }

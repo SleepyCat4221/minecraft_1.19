@@ -14,6 +14,8 @@
   "block.minecraftmod.strenghblock2": "Strengh 2 Block",
   "block.minecraftmod.jumpblock": "Jump Block",
   "block.minecraftmod.jumpblock2": "Jump 2 Block",
-  "block.minecraftmod.jumpblock20": "Jump 20 Block"
+  "block.minecraftmod.jumpblock20": "Jump 20 Block",
+  "block.minecraftmod.regen": "Regeneration Block",
+  "block.minecraftmod.regen2": "Regeneration 2 Block"
 
 }
