@@ -16,8 +16,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import org.apache.logging.log4j.core.jmx.Server;
 
-public class SpeedBlock extends Block {
-    public SpeedBlock(Properties properties) {
+public class JumpBlock extends Block {
+    public JumpBlock(Properties properties) {
         super(properties);
     }
 
@@ -26,20 +26,6 @@ public class SpeedBlock extends Block {
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
 
 
-        if(level.isClientSide){
-            if (hand == InteractionHand.MAIN_HAND){
-                player.sendSystemMessage(Component.literal("Right Clicked this!"));
-            }else {
-                player.sendSystemMessage(Component.literal("Right Clicked this!"));
-            }
-        } else {
-            if (hand == InteractionHand.MAIN_HAND){
-                player.sendSystemMessage(Component.literal("Right Clicked this!"));
-            }else {
-                player.sendSystemMessage(Component.literal("Right Clicked this!"));
-            }
-        }
-
 
         return super.use(state, level, pos, player, hand, hitResult);
     }
@@ -47,7 +33,7 @@ public class SpeedBlock extends Block {
     @Override
     public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity) {
         if(entity instanceof LivingEntity livingEntity){
-            livingEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED,200, 0));
+            livingEntity.addEffect(new MobEffectInstance(MobEffects.JUMP,200, 0));
         }
 
 

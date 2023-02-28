@@ -1,18 +1,13 @@
 package net.Exel.minecraftmod.block;
 
-import com.mojang.blaze3d.shaders.Uniform;
 import net.Exel.minecraftmod.MinecraftMod;
-import net.Exel.minecraftmod.block.custom.SpeedBlock;
-import net.Exel.minecraftmod.item.ModCreativeModeTab;
+import net.Exel.minecraftmod.block.custom.*;
 import net.Exel.minecraftmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.world.entity.vehicle.Minecart;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.ForcedChunksSavedData;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -21,9 +16,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import java.time.format.TextStyle;
-import java.util.Objects;
-import java.util.Properties;
 import java.util.function.Supplier;
 
 public class ModBlocks {
@@ -57,7 +49,7 @@ public class ModBlocks {
    public static final RegistryObject<Block> ATOM_ORE = registerBlock("atom_ore", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
            .strength(1f).requiresCorrectToolForDrops()), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
-
+    //Lucky Blocks
     public static final RegistryObject<Block> LUCKYBLOCK1 = registerBlock("luckyblock1", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.DIRT)
             .strength(1f), UniformInt.of(20,60)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
@@ -67,7 +59,26 @@ public class ModBlocks {
     public static final RegistryObject<Block> LUCKYBLOCK3 = registerBlock("luckyblock3", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.DIRT)
             .strength(1f), UniformInt.of(60,100)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
+    //Speed Blocks
     public static final RegistryObject<Block> SPEEDBLOCK = registerBlock("speedblock", () -> new SpeedBlock(BlockBehaviour.Properties.of(Material.DIRT)
+            .strength(1f)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> SPEEDBLOCK2 = registerBlock("speedblock2", () -> new Speedblock2(BlockBehaviour.Properties.of(Material.DIRT)
+            .strength(1f)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> SPEEDBLOCK3 = registerBlock("speedblock5", () -> new SpeedBlock5(BlockBehaviour.Properties.of(Material.DIRT)
+            .strength(1f)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+
+    //Strengh Blocks
+    public static final RegistryObject<Block> STRENGHBLOCK = registerBlock("strenghblock", () -> new StrenghBlock(BlockBehaviour.Properties.of(Material.DIRT)
+            .strength(1f)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> STRENGHBLOCK2 = registerBlock("strenghblock2", () -> new StrenghBlock2(BlockBehaviour.Properties.of(Material.DIRT)
+            .strength(1f)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+
+    //Jump Blocks
+    public static final RegistryObject<Block> JUMP_BLOCK = registerBlock("jumpblock", () -> new JumpBlock(BlockBehaviour.Properties.of(Material.DIRT)
+            .strength(1f)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> JUMP_BLOCK2 = registerBlock("jumpblock2", () -> new JumpBlock2(BlockBehaviour.Properties.of(Material.DIRT)
+            .strength(1f)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> JUMP_BLOCK20 = registerBlock("jumpblock20", () -> new JumpBlock20(BlockBehaviour.Properties.of(Material.DIRT)
             .strength(1f)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
 
