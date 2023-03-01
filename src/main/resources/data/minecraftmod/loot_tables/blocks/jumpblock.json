@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraftmod:regen"
+          "name": "minecraftmod:jumpblock"
         }
       ],
       "rolls": 1
