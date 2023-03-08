@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key":{
+    "#": {
+      "item": "minecraftmod:compressed_sugarcane"
+    }
+  } ,
+  "result": {
+    "item": "minecraftmod:compressed_sugarcane_2"
+  }
+}

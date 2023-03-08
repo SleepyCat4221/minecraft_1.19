@@ -7,14 +7,14 @@
   ],
   "key":{
     "#":{
-      "item": "minecraft:sugar_cane"
+      "item": "minecraftmod:compressed_sugarcane_2"
     },
     "I": {
-      "item": "minecraft:end_stone"
+      "item": "minecraftmod:speedblock2"
     }
   } ,
   "result": {
     "count": 8,
-    "item": "minecraftmod:speedblock"
+    "item": "minecraftmod:speedblock5"
   }
 }
