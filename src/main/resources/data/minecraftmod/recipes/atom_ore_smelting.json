@@ -2,7 +2,7 @@
   "type": "minecraft:smelting",
   "cookingtime": 200,
   "experience": 0.7,
-  "group": "zircon",
+  "group": "atom_ore",
   "ingredient": {
     "item": "minecraftmod:atom_ore"
   },

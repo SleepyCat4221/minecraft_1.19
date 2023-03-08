@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "minecraftmod:block/extra_sticky_slime_block"
+  }
+}

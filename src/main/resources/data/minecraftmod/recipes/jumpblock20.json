@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "E#E",
+    "#I#",
+    "E#E"
+  ],
+  "key":{
+    "#":{
+      "item": "minecraftmod:extra_sticky_slime_block"
+    },
+    "I": {
+      "item": "minecraftmod:jumpblock2"
+    },
+    "E": {
+      "item": "minecraftmod:compressed_rabbit_foot"
+    }
+  } ,
+  "result": {
+    "item": "minecraftmod:jumpblock5"
+  }
+}
