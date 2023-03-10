@@ -83,10 +83,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> REGENERATION2 = registerBlock("regen2", () -> new Regeneration2(BlockBehaviour.Properties.of(Material.DIRT)
             .strength(1f).explosionResistance(100)), ModCreativeModeTab.COMPRESSED_SUGARCANE);
 
-    public static final RegistryObject<Block> COMPRESSED_SLIME_BLOCK = registerBlock("compressed_slime_block", () -> new Block(BlockBehaviour.Properties.of(Material.DIRT)
+    public static final RegistryObject<Block> COMPRESSED_SLIME_BLOCK = registerBlock("compressed_slime_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
             .strength(1f)), ModCreativeModeTab.COMPRESSED_SUGARCANE);
 
-    public static final RegistryObject<Block> EXTRA_STICKY_SLIME_BLOCK = registerBlock("extra_sticky_slime_block", () -> new Block(BlockBehaviour.Properties.of(Material.DIRT)
+    public static final RegistryObject<Block> EXTRA_STICKY_SLIME_BLOCK = registerBlock("extra_sticky_slime_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
             .strength(1f)), ModCreativeModeTab.COMPRESSED_SUGARCANE);
 
 
