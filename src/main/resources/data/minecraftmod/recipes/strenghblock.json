@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#I#",
+    "###"
+  ],
+  "key":{
+    "#":{
+      "item": "minecraftmod:compressed_rotten_flesh"
+    },
+    "I": {
+      "item": "minecraft:zombie_head"
+    }
+  } ,
+  "result": {
+    "item": "minecraftmod:strenghblock"
+  }
+}

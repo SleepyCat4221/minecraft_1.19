@@ -57,31 +57,31 @@ public class ModBlocks {
 
     //Speed Blocks
     public static final RegistryObject<Block> SPEEDBLOCK = registerBlock("speedblock", () -> new SpeedBlock(BlockBehaviour.Properties.of(Material.DIRT)
-            .strength(1f)), ModCreativeModeTab.COMPRESSED_SUGARCANE);
+            .strength(1f).explosionResistance(100)), ModCreativeModeTab.COMPRESSED_SUGARCANE);
     public static final RegistryObject<Block> SPEEDBLOCK2 = registerBlock("speedblock2", () -> new Speedblock2(BlockBehaviour.Properties.of(Material.DIRT)
-            .strength(1f)), ModCreativeModeTab.COMPRESSED_SUGARCANE);
+            .strength(1f).explosionResistance(100)), ModCreativeModeTab.COMPRESSED_SUGARCANE);
     public static final RegistryObject<Block> SPEEDBLOCK3 = registerBlock("speedblock5", () -> new SpeedBlock5(BlockBehaviour.Properties.of(Material.DIRT)
-            .strength(1f)), ModCreativeModeTab.COMPRESSED_SUGARCANE);
+            .strength(1f).explosionResistance(100)), ModCreativeModeTab.COMPRESSED_SUGARCANE);
 
     //Strengh Blocks
     public static final RegistryObject<Block> STRENGHBLOCK = registerBlock("strenghblock", () -> new StrenghBlock(BlockBehaviour.Properties.of(Material.DIRT)
-            .strength(1f)), ModCreativeModeTab.COMPRESSED_SUGARCANE);
+            .strength(1f).explosionResistance(100)), ModCreativeModeTab.COMPRESSED_SUGARCANE);
     public static final RegistryObject<Block> STRENGHBLOCK2 = registerBlock("strenghblock2", () -> new StrenghBlock2(BlockBehaviour.Properties.of(Material.DIRT)
-            .strength(1f)), ModCreativeModeTab.COMPRESSED_SUGARCANE);
+            .strength(1f).explosionResistance(100)), ModCreativeModeTab.COMPRESSED_SUGARCANE);
 
     //Jump Blocks
     public static final RegistryObject<Block> JUMP_BLOCK = registerBlock("jumpblock", () -> new JumpBlock(BlockBehaviour.Properties.of(Material.DIRT)
-            .strength(1f)), ModCreativeModeTab.COMPRESSED_SUGARCANE);
+            .strength(1f).explosionResistance(100)), ModCreativeModeTab.COMPRESSED_SUGARCANE);
     public static final RegistryObject<Block> JUMP_BLOCK2 = registerBlock("jumpblock2", () -> new JumpBlock2(BlockBehaviour.Properties.of(Material.DIRT)
-            .strength(1f)), ModCreativeModeTab.COMPRESSED_SUGARCANE);
+            .strength(1f).explosionResistance(100)), ModCreativeModeTab.COMPRESSED_SUGARCANE);
     public static final RegistryObject<Block> JUMP_BLOCK20 = registerBlock("jumpblock20", () -> new JumpBlock20(BlockBehaviour.Properties.of(Material.DIRT)
-            .strength(1f)), ModCreativeModeTab.COMPRESSED_SUGARCANE);
+            .strength(1f).explosionResistance(100)), ModCreativeModeTab.COMPRESSED_SUGARCANE);
 
     //Regeneration Blocks
     public static final RegistryObject<Block> REGENERATION = registerBlock("regen", () -> new Regeneration(BlockBehaviour.Properties.of(Material.DIRT)
-            .strength(1f)), ModCreativeModeTab.COMPRESSED_SUGARCANE);
+            .strength(1f).explosionResistance(100)), ModCreativeModeTab.COMPRESSED_SUGARCANE);
     public static final RegistryObject<Block> REGENERATION2 = registerBlock("regen2", () -> new Regeneration2(BlockBehaviour.Properties.of(Material.DIRT)
-            .strength(1f)), ModCreativeModeTab.COMPRESSED_SUGARCANE);
+            .strength(1f).explosionResistance(100)), ModCreativeModeTab.COMPRESSED_SUGARCANE);
 
     public static final RegistryObject<Block> COMPRESSED_SLIME_BLOCK = registerBlock("compressed_slime_block", () -> new Block(BlockBehaviour.Properties.of(Material.DIRT)
             .strength(1f)), ModCreativeModeTab.COMPRESSED_SUGARCANE);

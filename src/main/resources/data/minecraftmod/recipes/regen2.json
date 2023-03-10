@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#E#",
+    "#I#",
+    "###"
+  ],
+  "key":{
+    "#":{
+      "item": "minecraft:suspicious_stew"
+    },
+    "I": {
+      "item": "minecraftmod:regen"
+    },
+    "E": {
+      "item": "minecraft:ghast_tear"
+    }
+  } ,
+  "result": {
+    "item": "minecraftmod:regen2"
+  }
+}

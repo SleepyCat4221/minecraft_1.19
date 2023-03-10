@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#I#",
+    "###"
+  ],
+  "key":{
+    "#":{
+      "item": "minecraftmod:industrial_compressed_rotten_flesh"
+    },
+    "I": {
+      "item": "minecraftmod:strenghblock"
+    }
+  } ,
+  "result": {
+    "item": "minecraftmod:strenghblock2"
+  }
+}
