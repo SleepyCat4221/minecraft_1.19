@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=true": { "model": "minecraftmod:block/corn_lamp_on"},
+    "lit=false": { "model": "minecraftmod:block/corn_lamp_off"}
+  }
+}

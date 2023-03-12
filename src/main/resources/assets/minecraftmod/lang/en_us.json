@@ -26,6 +26,7 @@
   "block.minecraftmod.regen": "Regeneration Block",
   "block.minecraftmod.regen2": "Regeneration 2 Block",
   "block.minecraftmod.compressed_slime_block": "Compressed Slime Block",
-  "block.minecraftmod.extra_sticky_slime_block": "Extra Sticky Slime Block"
+  "block.minecraftmod.extra_sticky_slime_block": "Extra Sticky Slime Block",
+  "block.minecraftmod.corn_lamp": "Corn Lamp"
 
 }

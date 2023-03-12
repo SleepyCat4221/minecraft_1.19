@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key":{
+    "#": {
+      "item": "minecraftmod:compressed_rotten_flesh"
+    }
+  } ,
+  "result": {
+    "item": "minecraftmod:industrial_compressed_rotten_flesh"
+  }
+}

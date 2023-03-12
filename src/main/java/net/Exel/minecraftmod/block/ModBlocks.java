@@ -89,5 +89,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> EXTRA_STICKY_SLIME_BLOCK = registerBlock("extra_sticky_slime_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
             .strength(1f)), ModCreativeModeTab.COMPRESSED_SUGARCANE);
 
+    public static final RegistryObject<Block> CORN_LAMP = registerBlock("corn_lamp", () -> new CornLamp(BlockBehaviour.Properties.of(Material.STONE)
+            .strength(1f).lightLevel(state -> state.getValue(CornLamp.LIT) ? 15 : 0)), ModCreativeModeTab.COMPRESSED_SUGARCANE);
+
+
 
 }
