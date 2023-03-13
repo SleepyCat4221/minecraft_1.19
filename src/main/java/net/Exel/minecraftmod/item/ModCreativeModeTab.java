@@ -8,7 +8,7 @@ public class ModCreativeModeTab {
     public static final CreativeModeTab CORN = new CreativeModeTab("CornTab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModItems.CORN.get());
+            return new ItemStack(ModItems.CORN_SWORD.get());
         }
     };
 

@@ -9,6 +9,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -91,6 +92,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> CORN_LAMP = registerBlock("corn_lamp", () -> new CornLamp(BlockBehaviour.Properties.of(Material.STONE)
             .strength(1f).lightLevel(state -> state.getValue(CornLamp.LIT) ? 15 : 0)), ModCreativeModeTab.COMPRESSED_SUGARCANE);
+
+    public static final RegistryObject<Block> CORN_CROP = BLOCKS.register("corn_crop", () -> new CornCrop(BlockBehaviour.Properties.copy(Blocks.WHEAT)
+            ));
 
 
 

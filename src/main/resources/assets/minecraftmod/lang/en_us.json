@@ -3,13 +3,15 @@
   "itemGroup.Compressed_sugarcane": "Effect Blocks",
 
 
-  "item.minecraftmod.corn": "Corn",
+  "item.minecraftmod.corn_sword": "Corn Sword",
   "item.minecraftmod.lucky_dice": "Lucky Dice",
   "item.minecraftmod.compressed_sugarcane": "Compressed Sugarcane",
   "item.minecraftmod.compressed_sugarcane_2": "Industrial Compressed Sugarcane",
   "item.minecraftmod.compressed_rabbit_foot": "Compressed Rabbit Foot",
   "item.minecraftmod.compressed_rotten_flesh": "Compressed Rotten Flesh",
   "item.minecraftmod.industrial_compressed_rotten_flesh": "Industrial Compressed Rotten Flesh",
+  "item.minecraftmod.corn": "Corn",
+  "item.minecraftmod.corn_seeds": "Corn Seeds",
 
   "block.minecraftmod.atom_ore": "Atom Ore",
   "block.minecraftmod.luckyblock1": "Lucky Block T1",
@@ -27,6 +29,7 @@
   "block.minecraftmod.regen2": "Regeneration 2 Block",
   "block.minecraftmod.compressed_slime_block": "Compressed Slime Block",
   "block.minecraftmod.extra_sticky_slime_block": "Extra Sticky Slime Block",
-  "block.minecraftmod.corn_lamp": "Corn Lamp"
+  "block.minecraftmod.corn_lamp": "Corn Lamp",
+  "block.minecraftmod.corn_crop": "Corn Crop"
 
 }

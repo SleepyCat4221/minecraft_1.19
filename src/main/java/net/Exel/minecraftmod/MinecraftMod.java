@@ -3,6 +3,8 @@ package net.Exel.minecraftmod;
 import com.mojang.logging.LogUtils;
 import net.Exel.minecraftmod.block.ModBlocks;
 import net.Exel.minecraftmod.item.ModItems;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -40,7 +42,7 @@ public class MinecraftMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.CORN_CROP.get(), RenderType.cutout());
         }
     }
 }
