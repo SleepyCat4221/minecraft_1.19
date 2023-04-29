@@ -96,7 +96,7 @@ public class ModBlocks {
 
 
     //Crops
-    public static final RegistryObject<Block> BLUEBERRY_CROP= BLOCKS.register()"blueberry_crop", () -> new BlueberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT));
+    public static final RegistryObject<Block> BLUEBERRY_CROP= BLOCKS.register("blueberry_crop", () -> new BlueberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
 
 
 }

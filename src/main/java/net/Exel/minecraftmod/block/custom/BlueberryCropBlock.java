@@ -1,5 +1,6 @@
 package net.Exel.minecraftmod.block.custom;
 
+import net.Exel.minecraftmod.item.ModItems;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
@@ -16,7 +17,7 @@ public class BlueberryCropBlock extends CropBlock {
 
     @Override
     protected ItemLike getBaseSeedId() {
-        return
+        return ModItems.BLUEBERRY_SEEDS.get();
     }
 
     @Override
