@@ -7,6 +7,9 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraft.world.entity.npc.VillagerProfession;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
 import net.minecraftforge.registries.DeferredRegister;
@@ -16,6 +19,7 @@ import org.spongepowered.tools.obfuscation.ObfuscationData;
 import oshi.annotation.concurrent.Immutable;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.Set;
 
 public class ModVillagers {
     public  static  final DeferredRegister<PoiType> POI_TYPES =
@@ -30,7 +34,7 @@ public class ModVillagers {
     public static void registerPOIs(){
         try{
             ObfuscationReflectionHelper.findMethod(PoiType.class,
-                "registerBlockStates", PoiType.class).invoke(null,REGEN_BLOCK_POI.get());
+                "registerBlockStates", PoiType.class).invoke(null,REGEN_BLOCK_POI.get(),BLOCK_POI.get());
         }catch (InvocationTargetException | IllegalAccessException exception){
             exception.printStackTrace();
         }
@@ -43,5 +47,15 @@ public class ModVillagers {
     public static final RegistryObject<VillagerProfession> REGEN_MASTER = VILLAGER_PROFESSIONS.register("regen_master",
             () -> new VillagerProfession("regen_master", x -> x.get() == REGEN_BLOCK_POI.get(),
                     x -> x.get() == REGEN_BLOCK_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
+                    SoundEvents.VILLAGER_WORK_ARMORER));
+
+
+    public static final RegistryObject<PoiType> BLOCK_POI = POI_TYPES.register("block_poi",
+            () -> new PoiType(ImmutableSet.copyOf(ModBlocks.COMPRESSED_SLIME_BLOCK.get().getStateDefinition().getPossibleStates()),
+                    1,1));
+
+    public static final RegistryObject<VillagerProfession> BLOCK_MASTER = VILLAGER_PROFESSIONS.register("block_master",
+            () -> new VillagerProfession("block_master", x -> x.get() == BLOCK_POI.get(),
+                    x -> x.get() == BLOCK_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
                     SoundEvents.VILLAGER_WORK_ARMORER));
 }
