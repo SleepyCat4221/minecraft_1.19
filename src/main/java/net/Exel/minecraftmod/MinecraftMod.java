@@ -4,8 +4,6 @@ import com.mojang.logging.LogUtils;
 import net.Exel.minecraftmod.block.ModBlocks;
 import net.Exel.minecraftmod.item.ModItems;
 import net.Exel.minecraftmod.villager.ModVillagers;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

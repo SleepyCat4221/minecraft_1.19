@@ -3,10 +3,10 @@ package net.Exel.minecraftmod.villager;
 import com.google.common.collect.ImmutableSet;
 import net.Exel.minecraftmod.MinecraftMod;
 import net.Exel.minecraftmod.block.ModBlocks;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraft.world.entity.npc.VillagerProfession;
+import net.minecraft.world.entity.vehicle.Minecart;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
@@ -15,8 +15,6 @@ import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import org.spongepowered.tools.obfuscation.ObfuscationData;
-import oshi.annotation.concurrent.Immutable;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Set;
@@ -40,6 +38,12 @@ public class ModVillagers {
         }
     }
 
+
+
+
+
+
+
     public static final RegistryObject<PoiType> REGEN_BLOCK_POI = POI_TYPES.register("regen_block_poi",
             () -> new PoiType(ImmutableSet.copyOf(ModBlocks.REGENERATION.get().getStateDefinition().getPossibleStates()),
                     1,1));
@@ -50,8 +54,10 @@ public class ModVillagers {
                     SoundEvents.VILLAGER_WORK_ARMORER));
 
 
+
+
     public static final RegistryObject<PoiType> BLOCK_POI = POI_TYPES.register("block_poi",
-            () -> new PoiType(ImmutableSet.copyOf(ModBlocks.COMPRESSED_SLIME_BLOCK.get().getStateDefinition().getPossibleStates()),
+            () -> new PoiType(ImmutableSet.copyOf(Blocks.NOTE_BLOCK.getStateDefinition().getPossibleStates()),
                     1,1));
 
     public static final RegistryObject<VillagerProfession> BLOCK_MASTER = VILLAGER_PROFESSIONS.register("block_master",

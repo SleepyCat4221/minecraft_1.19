@@ -43,7 +43,7 @@ public class ModEvents {
 
         if(event.getType() == ModVillagers.BLOCK_MASTER.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack stack = new ItemStack(ModItems.COMPRESSED_RABBIT_FOOT.get(), 1);
+            ItemStack stack = new ItemStack(ModItems.CORN_SWORD.get(), 1);
             int villagerLevel = 1;
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
@@ -53,7 +53,7 @@ public class ModEvents {
 
         if(event.getType() == ModVillagers.BLOCK_MASTER.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack stack = new ItemStack(ModItems.BLUEBERRY.get(), 15);
+            ItemStack stack = new ItemStack(ModItems.BLUEBERRY_SEEDS.get(), 15);
             int villagerLevel = 1;
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(

@@ -1,5 +1,6 @@
 {
   "values": [
-    "minecraftmod:regen_block_poi"
+    "minecraftmod:regen_block_poi",
+    "minecraftmod:block_poi"
   ]
 }
