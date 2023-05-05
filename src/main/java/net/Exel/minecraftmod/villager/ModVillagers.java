@@ -32,7 +32,7 @@ public class ModVillagers {
     public static void registerPOIs(){
         try{
             ObfuscationReflectionHelper.findMethod(PoiType.class,
-                "registerBlockStates", PoiType.class).invoke(null,REGEN_BLOCK_POI.get(),BLOCK_POI.get());
+                "registerBlockStates", PoiType.class).invoke(null,REGEN_BLOCK_POI.get(),BLOCK_POI.get(),BUILDER_POI.get());
         }catch (InvocationTargetException | IllegalAccessException exception){
             exception.printStackTrace();
         }
@@ -42,7 +42,7 @@ public class ModVillagers {
 
 
 
-
+    //Regen Villager
 
     public static final RegistryObject<PoiType> REGEN_BLOCK_POI = POI_TYPES.register("regen_block_poi",
             () -> new PoiType(ImmutableSet.copyOf(ModBlocks.REGENERATION.get().getStateDefinition().getPossibleStates()),
@@ -54,7 +54,7 @@ public class ModVillagers {
                     SoundEvents.VILLAGER_WORK_ARMORER));
 
 
-
+    //Block Villager
 
     public static final RegistryObject<PoiType> BLOCK_POI = POI_TYPES.register("block_poi",
             () -> new PoiType(ImmutableSet.copyOf(Blocks.NOTE_BLOCK.getStateDefinition().getPossibleStates()),
@@ -64,4 +64,17 @@ public class ModVillagers {
             () -> new VillagerProfession("block_master", x -> x.get() == BLOCK_POI.get(),
                     x -> x.get() == BLOCK_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
                     SoundEvents.VILLAGER_WORK_ARMORER));
+
+
+
+    //Builder Villager
+
+    public static final RegistryObject<PoiType> BUILDER_POI = POI_TYPES.register("builder_poi",
+            () -> new PoiType(ImmutableSet.copyOf(ModBlocks.COMPRESSED_DIAMOND_BLOCK.get().getStateDefinition().getPossibleStates()),
+                    1,1));
+
+    public static final RegistryObject<VillagerProfession> BUILDER_MASTER = VILLAGER_PROFESSIONS.register("builder_master",
+            () -> new VillagerProfession("builder_master", x -> x.get() == BUILDER_POI.get(),
+                    x -> x.get() == BUILDER_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
+                    SoundEvents.CREEPER_PRIMED));
 }

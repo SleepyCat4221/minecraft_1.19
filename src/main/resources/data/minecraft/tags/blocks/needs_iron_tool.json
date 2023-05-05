@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "minecraftmod:atom_ore",
-    "minecraftmod:luckyblock3"
+    "minecraftmod:luckyblock3",
+    "minecraftmod:compressed_diamond_block"
   ]
 }

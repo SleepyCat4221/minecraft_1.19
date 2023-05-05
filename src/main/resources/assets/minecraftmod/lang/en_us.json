@@ -31,10 +31,14 @@
   "block.minecraftmod.compressed_slime_block": "Compressed Slime Block",
   "block.minecraftmod.extra_sticky_slime_block": "Extra Sticky Slime Block",
   "block.minecraftmod.corn_lamp": "Corn Lamp",
+  "block.minecraftmod.compressed_diamond_block": "Reinforced Diamond Block",
+
+
 
   "block.minecraftmod.blueberry_crop": "Blueberry Crop",
 
   "entity.minecraft.villager.minecraftmod.regen_master": "CHAnge Name",
-  "entity.minecraft.villager.minecraftmod.block_master": "CHAnge Name"
+  "entity.minecraft.villager.minecraftmod.block_master": "CHAnge Name",
+  "entity.minecraft.villager.minecraftmod.builder_master": "Builder"
 
 }
