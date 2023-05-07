@@ -118,7 +118,7 @@ public class ModEvents {
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 8),
-                    stack,1,8,0.02F));
+                    stack,1,888,0.02F));
         }
 
         //Level 2
