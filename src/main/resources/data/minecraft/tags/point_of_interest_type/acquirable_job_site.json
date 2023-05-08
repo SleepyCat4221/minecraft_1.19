@@ -1,7 +1,7 @@
 {
   "values": [
     "minecraftmod:regen_block_poi",
-    "minecraftmod:block_poi",
+    "minecraftmod:enchanting_poi",
     "minecraftmod:builder_poi"
   ]
 }
