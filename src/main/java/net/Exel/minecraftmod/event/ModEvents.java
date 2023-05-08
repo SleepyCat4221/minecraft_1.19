@@ -8,6 +8,9 @@ import net.Exel.minecraftmod.villager.ModVillagers;
 import net.minecraft.advancements.critereon.EnchantedItemTrigger;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.inventory.BookEditScreen;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.util.datafix.fixes.ItemStackUUIDFix;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.inventory.EnchantmentMenu;
@@ -70,6 +73,10 @@ public class ModEvents {
             ItemStack stack = new ItemStack(Items.ENCHANTED_BOOK, 1);
             stack.enchant(Enchantments.MENDING, 1);
             int villagerLevel = 1;
+
+
+            CompoundTag taggs = stack.getTag();
+            stack.setTag(taggs);
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 16),
