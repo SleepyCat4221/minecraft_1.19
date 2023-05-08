@@ -92,15 +92,17 @@ public class ModEvents {
 
 
         //Builder Master
+        //Level 1
         if(event.getType() == ModVillagers.BUILDER_MASTER.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.QUARTZ_BLOCK, 16);
             int villagerLevel = 1;
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 6),
-                    stack,8,8,0.02F));
+                    new ItemStack(Items.EMERALD, 5),
+                    stack,8,3,0.02F));
         }
+
 
         if(event.getType() == ModVillagers.BUILDER_MASTER.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
@@ -109,27 +111,71 @@ public class ModEvents {
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 7),
-                    stack,8,8,0.02F));
-        }
-        if(event.getType() == ModVillagers.BUILDER_MASTER.get()) {
-            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack stack = new ItemStack(Items.NETHERITE_BLOCK, 1);
-            int villagerLevel = 1;
-
-            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 8),
-                    stack,1,888,0.02F));
+                    stack,8,3,0.02F));
         }
 
         //Level 2
         if(event.getType() == ModVillagers.BUILDER_MASTER.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack stack = new ItemStack(Items.DIRT, 9);
+            ItemStack stack = new ItemStack(Items.ARMOR_STAND, 1);
             int villagerLevel = 2;
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 2),
-                    stack,10,8,0.02F));
+                    new ItemStack(Items.EMERALD, 4),
+                    stack,16,2,0.02F));
+        }
+
+
+        if(event.getType() == ModVillagers.BUILDER_MASTER.get()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            ItemStack stack = new ItemStack(Items.EMERALD, 2);
+            int villagerLevel = 2;
+
+            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.RAW_GOLD, 1),
+                    stack,64,1,0.02F));
+        }
+
+        //Level 3
+        if(event.getType() == ModVillagers.BUILDER_MASTER.get()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            ItemStack stack = new ItemStack(Items.BLACK_CONCRETE, 16);
+            int villagerLevel = 3;
+
+            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 6),
+                    stack,8,2,0.02F));
+        }
+
+        if(event.getType() == ModVillagers.BUILDER_MASTER.get()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            ItemStack stack = new ItemStack(Items.ICE, 16);
+            int villagerLevel = 3;
+
+            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 8),
+                    stack,8,2,0.02F));
+        }
+
+        //Level 4
+        if(event.getType() == ModVillagers.BUILDER_MASTER.get()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            ItemStack stack = new ItemStack(Items.OBSIDIAN, 16);
+            int villagerLevel = 4;
+
+            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 16),
+                    stack,4,4,0.02F));
+        }
+
+        if(event.getType() == ModVillagers.BUILDER_MASTER.get()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            ItemStack stack = new ItemStack(Items.CRYING_OBSIDIAN, 8);
+            int villagerLevel = 4;
+
+            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 16),
+                    stack,8,4,0.02F));
         }
     }
 }

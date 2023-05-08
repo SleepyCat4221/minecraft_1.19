@@ -76,5 +76,5 @@ public class ModVillagers {
     public static final RegistryObject<VillagerProfession> BUILDER_MASTER = VILLAGER_PROFESSIONS.register("builder_master",
             () -> new VillagerProfession("builder_master", x -> x.get() == BUILDER_POI.get(),
                     x -> x.get() == BUILDER_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
-                    SoundEvents.CREEPER_PRIMED));
+                    SoundEvents.VILLAGER_TRADE));
 }
