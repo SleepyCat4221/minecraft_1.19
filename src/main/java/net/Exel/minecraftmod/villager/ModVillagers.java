@@ -32,7 +32,7 @@ public class ModVillagers {
     public static void registerPOIs(){
         try{
             ObfuscationReflectionHelper.findMethod(PoiType.class,
-                "registerBlockStates", PoiType.class).invoke(null,REGEN_BLOCK_POI.get(),BLOCK_POI.get(),BUILDER_POI.get());
+                "registerBlockStates", PoiType.class).invoke(null,REGEN_BLOCK_POI.get(),ENCHANTING_POI.get(),BUILDER_POI.get());
         }catch (InvocationTargetException | IllegalAccessException exception){
             exception.printStackTrace();
         }
@@ -54,16 +54,16 @@ public class ModVillagers {
                     SoundEvents.VILLAGER_WORK_ARMORER));
 
 
-    //Block Villager
+    //Enchanting Villager
 
-    public static final RegistryObject<PoiType> BLOCK_POI = POI_TYPES.register("block_poi",
-            () -> new PoiType(ImmutableSet.copyOf(Blocks.NOTE_BLOCK.getStateDefinition().getPossibleStates()),
+    public static final RegistryObject<PoiType> ENCHANTING_POI = POI_TYPES.register("enchanting_poi",
+            () -> new PoiType(ImmutableSet.copyOf(Blocks.ENCHANTING_TABLE.getStateDefinition().getPossibleStates()),
                     1,1));
 
-    public static final RegistryObject<VillagerProfession> BLOCK_MASTER = VILLAGER_PROFESSIONS.register("block_master",
-            () -> new VillagerProfession("block_master", x -> x.get() == BLOCK_POI.get(),
-                    x -> x.get() == BLOCK_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
-                    SoundEvents.VILLAGER_WORK_ARMORER));
+    public static final RegistryObject<VillagerProfession> ENCHANTING_MASTER = VILLAGER_PROFESSIONS.register("enchanting_master",
+            () -> new VillagerProfession("enchanting_master", x -> x.get() == ENCHANTING_POI.get(),
+                        x -> x.get() == ENCHANTING_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
+                    SoundEvents.VILLAGER_WORK_LIBRARIAN));
 
 
 
