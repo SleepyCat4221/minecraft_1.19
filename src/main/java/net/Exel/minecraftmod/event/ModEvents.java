@@ -1,10 +1,13 @@
 package net.Exel.minecraftmod.event;
 
+import com.mojang.datafixers.types.templates.Tag;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.Exel.minecraftmod.MinecraftMod;
 import net.Exel.minecraftmod.item.ModItems;
 import net.Exel.minecraftmod.villager.ModVillagers;
+import net.minecraft.advancements.critereon.EnchantedItemTrigger;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.inventory.BookEditScreen;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.inventory.EnchantmentMenu;
@@ -17,11 +20,14 @@ import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.item.enchantment.MendingEnchantment;
 import net.minecraft.world.item.enchantment.ProtectionEnchantment;
 import net.minecraft.world.item.trading.MerchantOffer;
+import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraft.world.entity.npc.VillagerTrades;
 
 import java.util.List;
+import java.util.Properties;
 import java.util.Stack;
 
 @Mod.EventBusSubscriber(modid = MinecraftMod.MOD_ID)
@@ -57,19 +63,20 @@ public class ModEvents {
 
 
 
-        //Blockmaster
+        //Book_master
         //Level 1
-        if(event.getType() == ModVillagers.ENCHANTING_MASTER.get()) {
+        if(event.getType() == ModVillagers.BOOK_MASTER.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack stack = new ItemStack(new EnchantedBookItem()), 8);
-            int villagerLevel = 4;
+            ItemStack stack = new ItemStack(Items.ENCHANTED_BOOK, 1);
+            stack.enchant(Enchantments.MENDING, 1);
+            int villagerLevel = 1;
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 16),
                     stack,8,4,0.02F));
         }
 
-        if(event.getType() == ModVillagers.ENCHANTING_MASTER.get()) {
+        /*if(event.getType() == ModVillagers.ENCHANTING_MASTER.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.CRYING_OBSIDIAN, 8);
             int villagerLevel = 4;
@@ -141,7 +148,7 @@ public class ModEvents {
                     new ItemStack(Items.EMERALD, 16),
                     stack,8,4,0.02F));
         }
-
+*/
 
 
 
