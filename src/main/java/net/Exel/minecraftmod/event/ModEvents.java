@@ -64,10 +64,10 @@ public class ModEvents {
 
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 32),
-                    stack,64,4,0.02F));
+                    new ItemStack(Items.EMERALD, 1),
+                    stack,2,4,0.02F));
 
-
+            trades.get(1);
         }
 
         /*if(event.getType() == ModVillagers.ENCHANTING_MASTER.get()) {
