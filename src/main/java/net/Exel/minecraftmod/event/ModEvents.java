@@ -1,9 +1,12 @@
 package net.Exel.minecraftmod.event;
 
+import com.ibm.icu.impl.DayPeriodRules;
+import com.ibm.icu.util.TimeArrayTimeZoneRule;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.Exel.minecraftmod.MinecraftMod;
 import net.Exel.minecraftmod.item.ModItems;
 import net.Exel.minecraftmod.villager.ModVillagers;
+import net.minecraft.client.Timer;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.EnchantedBookItem;
 import net.minecraft.world.item.ItemStack;
@@ -64,86 +67,146 @@ public class ModEvents {
 
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 1),
-                    stack,2,4,0.02F));
+                    new ItemStack(Items.EMERALD, 32),
+                    stack,64,8,0.02F));
+
+            trades.get(1);
+        }
+        //https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/modification-development/2428876-how-to-make-any-item-make-you-teleport
+
+        if(event.getType() == ModVillagers.BOOK_MASTER.get()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            ItemStack stack = new ItemStack(Items.ENCHANTED_BOOK, 1);
+
+            EnchantedBookItem.addEnchantment(stack, new EnchantmentInstance(Enchantments.ALL_DAMAGE_PROTECTION,4));
+            int villagerLevel = 1;
+
+
+            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 48),
+                    stack,8,4,0.02F));
 
             trades.get(1);
         }
 
-        /*if(event.getType() == ModVillagers.ENCHANTING_MASTER.get()) {
+        // Level 2
+        if(event.getType() == ModVillagers.BOOK_MASTER.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack stack = new ItemStack(Items.CRYING_OBSIDIAN, 8);
-            int villagerLevel = 4;
+            ItemStack stack = new ItemStack(Items.ENCHANTED_BOOK, 1);
+
+            EnchantedBookItem.addEnchantment(stack, new EnchantmentInstance(Enchantments.FALL_PROTECTION,4));
+            int villagerLevel = 2;
+
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 16),
-                    stack,8,4,0.02F));
+                    new ItemStack(Items.EMERALD, 24),
+                    stack,8,3,0.02F));
+
+            trades.get(1);
         }
-
-        //Level 2
-        if(event.getType() == ModVillagers.ENCHANTING_MASTER.get()) {
+        if(event.getType() == ModVillagers.BOOK_MASTER.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack stack = new ItemStack(Items.CRYING_OBSIDIAN, 8);
-            int villagerLevel = 4;
+            ItemStack stack = new ItemStack(Items.ENCHANTED_BOOK, 1);
+
+            EnchantedBookItem.addEnchantment(stack, new EnchantmentInstance(Enchantments.UNBREAKING,3));
+            int villagerLevel = 2;
+
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 16),
-                    stack,8,4,0.02F));
-        }
+                    stack,10,2,0.02F));
 
-        if(event.getType() == ModVillagers.ENCHANTING_MASTER.get()) {
-            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack stack = new ItemStack(Items.CRYING_OBSIDIAN, 8);
-            int villagerLevel = 4;
-
-            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 16),
-                    stack,8,4,0.02F));
+            trades.get(1);
         }
 
         //Level 3
-        if(event.getType() == ModVillagers.ENCHANTING_MASTER.get()) {
+        if(event.getType() == ModVillagers.BOOK_MASTER.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack stack = new ItemStack(Items.CRYING_OBSIDIAN, 8);
-            int villagerLevel = 4;
+            ItemStack stack = new ItemStack(Items.ENCHANTED_BOOK, 1);
+
+            EnchantedBookItem.addEnchantment(stack, new EnchantmentInstance(Enchantments.SHARPNESS,5));
+            int villagerLevel = 3;
+
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 16),
+                    new ItemStack(Items.EMERALD, 28),
                     stack,8,4,0.02F));
+
+            trades.get(1);
         }
-
-        if(event.getType() == ModVillagers.ENCHANTING_MASTER.get()) {
+        if(event.getType() == ModVillagers.BOOK_MASTER.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack stack = new ItemStack(Items.CRYING_OBSIDIAN, 8);
-            int villagerLevel = 4;
+            ItemStack stack = new ItemStack(Items.ENCHANTED_BOOK, 1);
+
+            EnchantedBookItem.addEnchantment(stack, new EnchantmentInstance(Enchantments.BLOCK_FORTUNE,3));
+            int villagerLevel = 3;
+
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 16),
+                    new ItemStack(Items.EMERALD, 42),
                     stack,8,4,0.02F));
+
+            trades.get(1);
         }
 
         //Level 4
-        if(event.getType() == ModVillagers.ENCHANTING_MASTER.get()) {
+        if(event.getType() == ModVillagers.BOOK_MASTER.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack stack = new ItemStack(Items.CRYING_OBSIDIAN, 8);
+            ItemStack stack = new ItemStack(Items.ENCHANTED_BOOK, 1);
+
+            EnchantedBookItem.addEnchantment(stack, new EnchantmentInstance(Enchantments.BLOCK_EFFICIENCY,5));
             int villagerLevel = 4;
 
-            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 16),
-                    stack,8,4,0.02F));
-        }
 
-        if(event.getType() == ModVillagers.ENCHANTING_MASTER.get()) {
+            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 36),
+                    stack,16,2,0.02F));
+
+            trades.get(1);
+        }
+        if(event.getType() == ModVillagers.BOOK_MASTER.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack stack = new ItemStack(Items.CRYING_OBSIDIAN, 8);
+            ItemStack stack = new ItemStack(Items.ENCHANTED_BOOK, 1);
+
+            EnchantedBookItem.addEnchantment(stack, new EnchantmentInstance(Enchantments.MOB_LOOTING,3));
             int villagerLevel = 4;
 
-            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 16),
-                    stack,8,4,0.02F));
-        }
-*/
 
+            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 22),
+                    stack,16,2,0.02F));
+
+            trades.get(1);
+        }
+        //Level 5 Test
+        if(event.getType() == ModVillagers.BOOK_MASTER.get()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            ItemStack stack = new ItemStack(Items.ENCHANTED_BOOK, 1);
+
+            EnchantedBookItem.addEnchantment(stack, new EnchantmentInstance(Enchantments.SILK_TOUCH,1));
+            int villagerLevel = 5;
+
+
+            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 32),
+                    stack,16,1,0.02F));
+
+            trades.get(1);
+        }
+        if(event.getType() == ModVillagers.BOOK_MASTER.get()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            ItemStack stack = new ItemStack(Items.ENCHANTED_BOOK, 1);
+
+            EnchantedBookItem.addEnchantment(stack, new EnchantmentInstance(Enchantments.SMITE,1));
+            int villagerLevel = 5;
+
+
+            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 32),
+                    stack,16,1,0.02F));
+
+            trades.get(1);
+        }
 
 
 
