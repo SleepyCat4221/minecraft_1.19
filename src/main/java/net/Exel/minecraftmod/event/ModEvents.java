@@ -67,8 +67,8 @@ public class ModEvents {
 
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 32),
-                    stack,64,8,0.02F));
+                    new ItemStack(Items.EMERALD, 24),
+                    stack,64,4,0.02F));
 
             trades.get(1);
         }
@@ -100,7 +100,7 @@ public class ModEvents {
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 24),
-                    stack,8,3,0.02F));
+                    stack,8,4,0.02F));
 
             trades.get(1);
         }
@@ -114,7 +114,7 @@ public class ModEvents {
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 16),
-                    stack,10,2,0.02F));
+                    stack,10,4,0.02F));
 
             trades.get(1);
         }
@@ -130,7 +130,7 @@ public class ModEvents {
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 28),
-                    stack,8,4,0.02F));
+                    stack,12,4,0.02F));
 
             trades.get(1);
         }
@@ -144,7 +144,7 @@ public class ModEvents {
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 42),
-                    stack,8,4,0.02F));
+                    stack,12,4,0.02F));
 
             trades.get(1);
         }
@@ -160,7 +160,7 @@ public class ModEvents {
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 36),
-                    stack,16,2,0.02F));
+                    stack,16,4,0.02F));
 
             trades.get(1);
         }
@@ -168,17 +168,17 @@ public class ModEvents {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.ENCHANTED_BOOK, 1);
 
-            EnchantedBookItem.addEnchantment(stack, new EnchantmentInstance(Enchantments.MOB_LOOTING,3));
+            EnchantedBookItem.addEnchantment(stack, new EnchantmentInstance(Enchantments.SWIFT_SNEAK,3));
             int villagerLevel = 4;
 
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 22),
-                    stack,16,2,0.02F));
+                    new ItemStack(Items.EMERALD, 42),
+                    stack,16,4,0.02F));
 
             trades.get(1);
         }
-        //Level 5 Test
+        //Level 5
         if(event.getType() == ModVillagers.BOOK_MASTER.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.ENCHANTED_BOOK, 1);
@@ -189,7 +189,7 @@ public class ModEvents {
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 32),
-                    stack,16,1,0.02F));
+                    stack,16,4,0.02F));
 
             trades.get(1);
         }
@@ -197,13 +197,13 @@ public class ModEvents {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.ENCHANTED_BOOK, 1);
 
-            EnchantedBookItem.addEnchantment(stack, new EnchantmentInstance(Enchantments.SMITE,1));
+            EnchantedBookItem.addEnchantment(stack, new EnchantmentInstance(Enchantments.MOB_LOOTING,5));
             int villagerLevel = 5;
 
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 32),
-                    stack,16,1,0.02F));
+                    new ItemStack(Items.EMERALD, 128),
+                    stack,16,16,0.02F));
 
             trades.get(1);
         }
@@ -221,11 +221,9 @@ public class ModEvents {
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 5),
-                    stack,8,3,0.02F));
+                    stack,32,3,0.02F));
 
-            for (int i = 0; i <= 3; i++){
-                trades.get(1);
-            }
+            trades.get(1);
         }
 
 
@@ -236,7 +234,9 @@ public class ModEvents {
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 7),
-                    stack,8,3,0.02F));
+                    stack,32,3,0.02F));
+
+            trades.get(1);
         }
 
         //Level 2
@@ -247,7 +247,9 @@ public class ModEvents {
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 4),
-                    stack,16,2,0.02F));
+                    stack,32,2,0.02F));
+
+            trades.get(1);
         }
 
 
@@ -257,8 +259,10 @@ public class ModEvents {
             int villagerLevel = 2;
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.RAW_GOLD, 1),
+                    new ItemStack(Items.RAW_GOLD, 2),
                     stack,64,1,0.02F));
+
+            trades.get(1);
         }
 
         //Level 3
@@ -269,7 +273,9 @@ public class ModEvents {
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 6),
-                    stack,8,2,0.02F));
+                    stack,32,2,0.02F));
+
+            trades.get(1);
         }
 
         if(event.getType() == ModVillagers.BUILDER_MASTER.get()) {
@@ -279,7 +285,9 @@ public class ModEvents {
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 8),
-                    stack,8,2,0.02F));
+                    stack,32,2,0.02F));
+
+            trades.get(1);
         }
 
         //Level 4
@@ -290,7 +298,9 @@ public class ModEvents {
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 16),
-                    stack,4,4,0.02F));
+                    stack,32,4,0.02F));
+
+            trades.get(1);
         }
 
         if(event.getType() == ModVillagers.BUILDER_MASTER.get()) {
@@ -300,7 +310,9 @@ public class ModEvents {
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 16),
-                    stack,8,4,0.02F));
+                    stack,32,4,0.02F));
+
+            trades.get(1);
         }
     }
 }

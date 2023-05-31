@@ -3,6 +3,7 @@ package net.Exel.minecraftmod.item;
 import net.Exel.minecraftmod.MinecraftMod;
 import net.Exel.minecraftmod.block.ModBlocks;
 import net.Exel.minecraftmod.item.custom.LuckyDice;
+import net.Exel.minecraftmod.item.custom.TpStaff;
 import net.Exel.minecraftmod.item.custom.compressed;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -39,6 +40,7 @@ public class ModItems {
     public static final RegistryObject<Item> INDUSTRIAL_COMPRESSED_ROTTEN_FLESH = ITEMS.register("industrial_compressed_rotten_flesh", () -> new compressed(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
     public static final RegistryObject<Item> BLUEBERRY_SEEDS = ITEMS.register("blueberry_seeds", () -> new ItemNameBlockItem(ModBlocks.BLUEBERRY_CROP.get(),new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
     public static final RegistryObject<Item> BLUEBERRY = ITEMS.register("blueberry", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC).food(new FoodProperties.Builder().nutrition(2).saturationMod(2f).build())));
+    public static final RegistryObject<Item> TP_STAFF = ITEMS.register("tp_staff", () -> new TpStaff(new Item.Properties().stacksTo(1).tab(CreativeModeTab.TAB_MISC)));
 
 
 }
