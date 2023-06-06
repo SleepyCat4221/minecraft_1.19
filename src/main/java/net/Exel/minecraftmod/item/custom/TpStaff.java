@@ -41,25 +41,49 @@ public class TpStaff extends Item  {
              */
 
 
-            if (!level.isClientSide() && hand == InteractionHand.MAIN_HAND) {
-                Vec3 pos = new Vec3(player.getX()   , player.getZ() , player.getZ());
+            /*if (!level.isClientSide() && hand == InteractionHand.MAIN_HAND) {
+                Vec3 pos = new Vec3(player.getX()   , player.getY() , player.getZ());
                 Direction dir =    player.getDirection();
 
 
                 if (dir == Direction.SOUTH){
-                    player.setPos(pos.x ,pos.y + 10, pos.z);
+                    player.setPos(pos.x ,pos.y,pos.z +10);
+                    player.sendSystemMessage(Component.literal("South"));
                 }else if (dir == Direction.WEST){
                     player.setPos(pos.x - 10,pos.y, pos.z);
+                    player.sendSystemMessage(Component.literal("West"));
                 }else if (dir == Direction.NORTH){
                     player.setPos(pos.x ,pos.y -10, pos.z);
+                    player.sendSystemMessage(Component.literal("North"));
                 }else if (dir == Direction.EAST){
                     player.setPos(pos.x  + 10,pos.y, pos.z);
-                }else if (dir == Direction.DOWN){
-                    player.setPos(pos.x ,pos.y , pos.z - 10);
-                }else if(dir == Direction.UP){
-                    player.setPos(pos.x ,pos.y , pos.z + 10);
+                    player.sendSystemMessage(Component.literal("East"));
                 }else {
                     player.sendSystemMessage(Component.literal("Some Error accured!!!"));
+                }
+
+
+            }*/
+
+            if (level.isClientSide() && hand == InteractionHand.MAIN_HAND) {
+                Vec3 pos = new Vec3(player.getX()   , player.getY() , player.getZ());
+                Direction dir =    player.getDirection();
+
+
+                if (dir == Direction.SOUTH){
+                    player.setPos(pos.x ,pos.z + 5,pos.y );
+                    player.sendSystemMessage(Component.literal("South"));
+                }else if (dir == Direction.WEST){
+                    player.setPos(pos.x +10,pos.z, pos.y);
+                    player.sendSystemMessage(Component.literal("West"));
+                }else if (dir == Direction.NORTH){
+                    player.setPos(pos.x ,pos.z, pos.y + 10);
+                    player.sendSystemMessage(Component.literal("North"));
+                }else if (dir == Direction.EAST){
+                    player.setPos(pos.x  + 10,pos.z, pos.y);
+                    player.sendSystemMessage(Component.literal("East"));
+                }else {
+                    player.sendSystemMessage(Component.literal("Some Error accured!!! Make sure cheats are enabled!"));
                 }
 
 
